@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RPSLS.Gestures;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,16 +11,15 @@ namespace RPSLS
     {
         //Member Variabes (HAS A)
         public string name;
-        public List<string> gestures;
-        public string chosenGesture;
         public int score;
+        public List<Gesture> gestures;
+        public Gesture chosenGesture;
 
         //Constructor
         public Player(string name)
         {
             this.name = name;
-            gestures = new List<string> {"rock", "paper", "scissors", "lizard", "Spock" };
-            chosenGesture = "";
+            gestures = new List<Gesture> { new Rock(), new Paper(), new Scissors(), new Lizard(), new Spock() };
             score = 0;
         }
 
