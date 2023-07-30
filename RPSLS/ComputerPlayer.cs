@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RPSLS.Gestures;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,6 @@ namespace RPSLS
         public override void ChooseGesture()
         {
             chosenGesture = gestures[Randomizer.RandomNumber()];
-            Console.WriteLine($"{name} chooses {chosenGesture.name}");
         }
     }
 }

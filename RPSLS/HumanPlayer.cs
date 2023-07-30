@@ -8,13 +8,12 @@ namespace RPSLS
 {
     internal class HumanPlayer : Player
     {
-        public HumanPlayer(string name) : base(name)
-        {
-        }
+        public HumanPlayer(string name) : base(name) { }
 
         public override void ChooseGesture()
         {
             Console.WriteLine($"\n{name}, choose a gesture: ");
+
             while (true)
             {
                 for (int i = 0; i < gestures.Count; i++)
@@ -54,8 +53,6 @@ namespace RPSLS
                     Console.WriteLine("Wrong input, try again");
                 }
             }
-
-            Console.WriteLine($"{name} chooses {chosenGesture.name}");
         }
     }
 }

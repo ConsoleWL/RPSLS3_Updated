@@ -12,7 +12,7 @@ namespace RPSLS
         public static int RandomNumber()
         {
             Random rnd = new Random();
-            int number = rnd.Next(0, 6);
+            int number = rnd.Next(0, 5);
             return number;
         }
     }

@@ -8,20 +8,13 @@ namespace RPSLS.Gestures
 {
     internal class Spock : Gesture
     {
-        public Spock()
-        {
-            name = "spock";
-        }
+        public Spock() => name = "spock";
         internal override bool WillBeat(Gesture gesture)
         {
-            if(gesture.name == "rock" || gesture.name == "scissors")
-            {
+            if (gesture.name == "rock" || gesture.name == "scissors")
                 return true;
-            }
             else
-            {
                 return false;
-            }
         }
     }
 }

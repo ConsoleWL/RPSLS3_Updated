@@ -8,22 +8,14 @@ namespace RPSLS.Gestures
 {
     internal class Rock : Gesture
     {
-
-        public Rock() 
-        {
-            name = "rock";
-        }
+        public Rock() => name = "rock";
 
         internal override bool WillBeat(Gesture gesture)
         {
             if (gesture.name == "scissors" || gesture.name == "lizard")
-            {
                 return true;
-            }
             else
-            {
                 return false;
-            }
         }
     }
 }
