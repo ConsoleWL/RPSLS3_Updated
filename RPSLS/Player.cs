@@ -19,12 +19,17 @@ namespace RPSLS
         public Player(string name)
         {
             this.name = name;
-            gestures = new List<Gesture> { new Rock(), new Paper(), new Scissors(), new Lizard(), new Spock() };
+            gestures = new List<Gesture>
+            {   new Rock(),
+                new Paper(),
+                new Scissors(),
+                new Lizard(),
+                new Spock()
+            };
             score = 0;
         }
 
         //Member Methods (CAN DO)
-        //This abstract method must be overridden by the child Player classes
         public abstract void ChooseGesture();
     }
 }
