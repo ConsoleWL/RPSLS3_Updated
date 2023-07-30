@@ -11,6 +11,8 @@ namespace RPSLS
         //Member Variabes (HAS A)
         public Player playerOne;
         public Player playerTwo;
+        int numberOfPlayers;
+
 
         //Constructor
         public Game()
@@ -42,9 +44,29 @@ namespace RPSLS
 
         }
 
-        public int ChooseNumberOfHumanPlayers()
+        public void ChooseNumberOfHumanPlayers()
         {
-            return 0;
+            Console.WriteLine("\nChoose number of players 1 or 2:");
+
+            while (true)
+            {
+                string temp = Console.ReadLine();
+
+                if (temp == "1")
+                {
+                    numberOfPlayers = 1;
+                    break;
+                }
+                if(temp == "2")
+                {
+                    numberOfPlayers = 2;
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("\nWrong input. Choose between 1 or 2");
+                }
+            }
         }
 
         public void CreatePlayerObjects(int numberOfHumanPlayers)
